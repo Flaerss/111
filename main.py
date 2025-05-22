@@ -24,9 +24,7 @@ async def change_auto_reply(message: types.Message):
     parts = message.text.split(" ", 1)
     if len(parts) == 1:
         reply = get_auto_reply()
-        await message.answer(f"Текущий автоответ:
-
-{reply}")
+        await message.answer(f"Текущий автоответ: {reply}")
     else:
         set_auto_reply(parts[1])
         await message.answer("Автоответ обновлён.")
