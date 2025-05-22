@@ -1,8 +1,7 @@
+import asyncio
 import logging
-import os
-from aiogram import Bot, Dispatcher, executor, types
-from aiogram.types import Message
-from dotenv import load_dotenv
+from aiogram import Bot, Dispatcher, types
+from aiogram.filters.command import Command
 
 from handlers import register_handlers
 from scheduler import start_scheduler
