@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table class="table">
+  <thead>
+    <tr>
+      <th>Название</th>
+      <th>Триггер</th>
+      <th>Платформа</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for template in templates %}
+    <tr>
+      <td>{{ template.name }}</td>
+      <td>{{ template.trigger_event }}</td>
+      <td>{{ template.platform }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
